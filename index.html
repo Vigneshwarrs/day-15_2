@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Forms</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+    integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            background-color: #eef0ec;
+            color: #456268;
+        }
+        .container {
+            margin: 3%;
+        }
+    </style>
+</head>
+<body>
+    <p id="description" hidden>00</p>
+    <div class="container">
+        <div class="row">
+            <div class="col-4">
+                <h1 id="title">Form Submission: </h1>
+                <form action="" id="survey-form" class="survey-form">
+                    <div class="form-group">
+                        <label id="name-label" for="fname">First Name:</label>
+                        <input type="text" name="fname" id="first-name" class="form-control" placeholder="First Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lname">Last Name:</label>
+                        <input type="text" name="lname" id="last-name" class="form-control" placeholder="Last Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label id="email-label" for="email">Email:</label>
+                        <input type="email" name="email" id="email" class="form-control" placeholder="Email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="address1">Address Line 1:</label>
+                        <input type="text" name="address1" id="address1" class="form-control" placeholder="Address Line 1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="address2">Address Line 2:</label>
+                        <input type="text" name="address2" id="address2" class="form-control" placeholder="Address Line 2" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="pin">PIN :</label>
+                        <input type="text" name="pin" id="pin" class="form-control" placeholder="PIN">
+                    </div>
+                    <div class="form-group">
+                        <label for="gender">Gender :</label><br>
+                        <input type="radio" name="gender" id="male" value="male"> Male
+                        <input type="radio" name="gender" id="female" value="female"> Female
+                    </div>
+                    <div class="form-group">
+                        <label for="food">Choice of Food: <span>(must choose atleast 2 out of 5 options)</span></label>
+                        <input type="checkbox" name="food" id="NIndia" value="north india"> North India <br>
+                        <input type="checkbox" name="food" id="SIndia" value="south india"> South India <br>
+                        <input type="checkbox" name="food" id="Chinese" value="chinese"> Chinese <br>
+                        <input type="checkbox" name="food" id="Japanese" value="japanese"> Japanese <br>
+                        <input type="checkbox" name="food" id="seafood" value="sea food"> Sea Food <br>
+                    </div>
+                    <div class="form-group">
+                        <label for="state">State: </label>
+                        <input type="text" name="state" id="state" class="form-control" placeholder="State">
+                    </div>
+                    <div class="form-group">
+                        <label for="country">County: </label>
+                        <input type="text" name="country" id="country" class="form-control" placeholder="Country">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="comments">Comment: </label><br>
+                        <textarea name="comments" id="comments" cols="45" rows="5"></textarea>
+                    </div>
+
+                        <button type="submit" id="submit" class="btn btn-secondary">Submit</button>
+                </form>
+            </div>
+            <div class="col-8">
+                <table class="table table-striped">
+                    <thead class="table-dark">
+                        <tr>
+                            <td>First Name</td>
+                            <td>Last Name</td>
+                            <td>Email</td>
+                            <td>Address</td>
+                            <td>Pincode</td>
+                            <td>Gender</td>
+                            <td>Food</td>
+                            <td>State</td>
+                            <td>Country</td>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody" class="tbody"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+    <script src="https://app.zenclass.in/sheets/v1/js/zen/suite/bundle.js"></script>
+</body>
+</html>
